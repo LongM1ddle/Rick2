@@ -17,7 +17,6 @@ body {
   font-weight: 700;
   line-height: 21.04px;
   width: 100vw;
-  margin-top: auto;
 }
 .header ul {
   float: left;
@@ -46,6 +45,30 @@ body {
   margin: 0 auto;
 }
 
+.episode-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.episode-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.episode-card {
+  background: #ffffff;
+  padding: 33px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px #00000024;
+  box-shadow: 0px 3px 4px 0px #0000001F;
+  box-shadow: 0px 1px 5px 0px #00000033;  
+  text-align: center;
+  max-height: 160px;
+}
 
 .characters {
   display: grid;
@@ -61,7 +84,13 @@ body {
   transform: scale(0.8);
   width: fit-content;
 }
-
+.episodes-input {
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 30%;
+  border-Radius: 5px;
+  border: 1px solid #00000080;
+}
 
 .logo {
   height: 6em;

@@ -1,18 +1,20 @@
-import { useEffect, useState } from "react";
+
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import header from "./components/Header/header";
+import Header from "./components/Header/header";
 import logo from "./assets/logo.svg";
-import characterFilter from "./components/CharacterFilter/characterFilter";
+import Charpage from "./pages/CharPage/charpage";
+import Episodes from "./components/Episodes/episodes";
 
 function App() {
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState("");
-
   return (
     <>
-      {header()}
-      <img src={logo}></img>
-      {characterFilter()}
+      <Header/>
+      <Routes>
+      <Route path="*" element={<h1>Ошибка</h1>}></Route>
+      <Route path="/" element={<Charpage/>}></Route>
+      <Route path="/episodes" element={<Episodes/>}></Route>
+      </Routes>
     </>
   );
 }

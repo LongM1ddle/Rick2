@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import pickle from "//assets/pickle.webp";
 
 export default function CharacterFilter() {
   const [species, setSpecies] = useState("");
@@ -95,7 +94,6 @@ export default function CharacterFilter() {
           ))
         ) : (
           <div className="no-data">
-            <img src={pickle} alt="No Data" />
             <h2>Waba Laba Dub Dub! No Data!</h2>
           </div>
         )}
