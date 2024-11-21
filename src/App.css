@@ -27,6 +27,7 @@ body {
 .search-input {
   display: grid;
   grid-template-columns: repeat(4, 25vw);
+  
 }
 .no-data {
   text-align: center;
@@ -43,6 +44,17 @@ body {
   column-gap:10px;
   width: fit-content;
   margin: 0 auto;
+  
+}
+.filters select {
+  padding: 15px;
+  border-Radius: 5px;
+  border: 1px solid #00000080;
+}
+.filters input {
+  border-Radius: 5px;
+  border: 1px solid #00000080;
+  padding: 15px;
 }
 
 .episode-container {
@@ -72,10 +84,9 @@ body {
 
 .characters {
   display: grid;
-  grid-template-columns: repeat(4, 25vw);
+  grid-template-columns: repeat(4, 15vw);
   text-align: left;
   line-height: 15px;
-  margin-left: -120%;
 }
 .charpage {
   box-shadow: 0px 2px 4px 0px #00000024;
@@ -83,6 +94,12 @@ body {
   box-shadow: 0px 1px 5px 0px #00000033;
   transform: scale(0.8);
   width: fit-content;
+}
+.charpage p{
+padding-left: 15px;
+}
+.charpage h3 {
+  padding-left: 15px;
 }
 .episodes-input {
   margin-bottom: 20px;
@@ -92,12 +109,6 @@ body {
   border: 1px solid #00000080;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

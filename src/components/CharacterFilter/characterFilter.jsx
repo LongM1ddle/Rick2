@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 export default function CharacterFilter() {
   const [species, setSpecies] = useState("");
@@ -86,11 +88,13 @@ export default function CharacterFilter() {
       <div className="characters">
         {characters.length > 0 ? (
           characters.map((character) => (
-            <div className="charpage" key={character.id}>
+            <Link to={`/character_page/${character.id}`} key={character.id}>     
+            <div className="charpage">
               <img src={character.image} alt={character.name} />
               <h3>{character.name}</h3>
               <p>{character.status} - {character.gender}</p>
             </div>
+            </Link>
           ))
         ) : (
           <div className="no-data">
