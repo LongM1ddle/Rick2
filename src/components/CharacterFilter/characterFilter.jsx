@@ -56,6 +56,7 @@ export default function CharacterFilter() {
         placeholder="Filter by name..."
         value={name}
         onChange={(e) => setName(e.target.value)}
+
       />
 
       <select value={species} onChange={(e) => setSpecies(e.target.value)}>

@@ -13,7 +13,7 @@ function App() {
     <>
       <Header/>
       <Routes>
-      <Route path="*" element={<h1>Ошибка</h1>}></Route>
+      <Route path="*" element={<h1>Ошибка 404</h1>}></Route>
       <Route path="/" element={<Characters/>}></Route>
       <Route path="/episodes" element={<Episodes/>}></Route>
       <Route path="/character_page/:id" element={<CharacterPage/>}></Route>
