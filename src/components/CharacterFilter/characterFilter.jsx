@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 export default function CharacterFilter() {
   const [species, setSpecies] = useState("");
   const [gender, setGender] = useState("");
@@ -31,9 +30,9 @@ export default function CharacterFilter() {
         } else {
           setCharacters((prev) => [...prev, ...(data.results || [])]);
         }
-
         setHasMore(data.info?.next !== null);
-      } catch (error) {
+      } 
+      catch (error) {
         console.error("Error fetching data:", error);
         setCharacters([]);
         setHasMore(false);
@@ -58,19 +57,14 @@ export default function CharacterFilter() {
         onChange={(e) => setName(e.target.value)}
 
       />
-
       <select value={species} onChange={(e) => setSpecies(e.target.value)}>
-        <option value="" disabled hidden>
-          Species
-        </option>
+        <option value="">All Species</option>
         <option value="human">Human</option>
         <option value="alien">Alien</option>
       </select>
 
       <select value={gender} onChange={(e) => setGender(e.target.value)}>
-        <option value="" disabled hidden>
-          Gender
-        </option>
+        <option value="">All Gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="genderless">Genderless</option>
@@ -78,31 +72,32 @@ export default function CharacterFilter() {
       </select>
 
       <select value={status} onChange={(e) => setStatus(e.target.value)}>
-        <option value="" disabled hidden>
-          Status
-        </option>
+        <option value="">All Status</option>
         <option value="alive">Alive</option>
         <option value="dead">Dead</option>
         <option value="unknown">Unknown</option>
       </select>
-
-      <div className="characters">
         {characters.length > 0 ? (
-          characters.map((character) => (
-            <Link to={`/character_page/${character.id}`} key={character.id}>     
-            <div className="charpage">
-              <img src={character.image} alt={character.name} />
-              <h3>{character.name}</h3>
-              <p>{character.status} - {character.gender}</p>
-            </div>
-            </Link>
-          ))
+          <div className="characters">
+            {characters.map((character) => (
+
+              <div className="charpage">
+                <Link to={`/character_page/${character.id}`} key={character.id}>
+                    <img src={character.image} alt={character.name} />
+                    <h3>{character.name}</h3>
+                    <p>{character.status} - {character.gender}</p>
+                </Link>
+              </div>
+              ))
+            }
+          </div>
         ) : (
           <div className="no-data">
+            <img src="" ></img>
             <h2>Waba Laba Dub Dub! No Data!</h2>
           </div>
+          
         )}
-      </div>
       </div>
       {hasMore && (
         <button onClick={() => setPage((prev) => prev + 1)}>Show More</button>
