@@ -58,7 +58,7 @@ export default function EpisodeList() {
 
       <input
         type="text"
-        className="episodes-input"
+        className="input-filter"
         placeholder="Filter by name or episode (ex. S01 or S01E02)"
         value={search}
         onChange={(e) => setSearch(e.target.value)}

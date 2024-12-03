@@ -13,6 +13,15 @@ li {
   list-style: none;
 }
 
+.main-logo {
+  padding:30px;
+}
+.main-logo img {
+  object-fit:scale-down;
+  width: 50%;
+  height: auto;
+}
+
 .release-date {
   font-family: Roboto;
   font-size: 10px;
@@ -35,6 +44,7 @@ li {
   font-weight: 700;
   line-height: 21.04px;
   width: 100vw;
+  margin: auto;
 }
 .header ul {
   float: left;
@@ -42,11 +52,32 @@ li {
   gap: 30px;
   list-style: none;
 }
+
 .search-input {
   display: grid;
   grid-template-columns: repeat(4, 25vw);
   
 }
+.location-container {
+  padding: 20px;
+}
+
+
+.location-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+
+.location-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+
 .no-data {
   text-align: center;
 }
@@ -73,6 +104,25 @@ li {
   padding: 15px;
 }
 
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd; 
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  justify-content: center;
+  height: 150px;
+}
+
+.location-card p {
+  margin: 5px 0; 
+}
+
+
 .episode-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -86,6 +136,7 @@ li {
   gap: 20px;
   align-items: center;
 }
+
 
 .episode-card {
   background: #ffffff;
@@ -155,10 +206,10 @@ li {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .14), 0 3px 4px 0 rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
   width: auto;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .charpage img {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .char-info {
@@ -179,32 +230,10 @@ li {
 .charpage h3 {
   padding-left: 15px;
 }
-.episodes-input {
+.input-filter {
   margin-bottom: 20px;
   padding: 15px;
   width: 30%;
   border-Radius: 5px;
   border: 1px solid #00000080;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }

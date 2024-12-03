@@ -8,7 +8,7 @@ export default function header() {
         <a href="/"><img src={blackLogo}></img></a>
         <ul className="Header_nav">
             <li className="Header_item"><Link to="/">Characters</Link></li>
-            <li className="Header_item"><a href="">Locations</a></li>
+            <li className="Header_item"><Link to="/locations">Locations</Link></li>
             <li className="Header_item"><Link to="/episodes">Episodes</Link></li>
         </ul>
         </div>
